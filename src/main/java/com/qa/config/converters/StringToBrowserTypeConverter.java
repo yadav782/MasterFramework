@@ -3,7 +3,7 @@ package com.qa.config.converters;
 import java.lang.reflect.Method;
 import java.util.Map;
 
-import enums.BrowserType;
+import com.qa.enums.BrowserType;
 import org.aeonbits.owner.Converter;
 
 public class StringToBrowserTypeConverter implements Converter<BrowserType> {

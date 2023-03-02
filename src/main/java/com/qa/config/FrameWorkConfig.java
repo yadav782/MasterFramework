@@ -1,8 +1,10 @@
 package com.qa.config;
 
 import com.qa.config.converters.StringToBrowserTypeConverter;
+import com.qa.enums.BrowserRemoteModeType;
+import com.qa.enums.BrowserType;
+import com.qa.enums.RunModeBrowserType;
 import org.aeonbits.owner.Config;
-import org.openqa.selenium.remote.BrowserType;
 
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({
@@ -15,4 +17,10 @@ public interface FrameWorkConfig extends Config {
     @DefaultValue("Chrome")
     @ConverterClass(StringToBrowserTypeConverter.class)
     BrowserType browser();
+
+    @Key("runModeBrowser")
+    RunModeBrowserType browserRunMode();
+
+    @Key("browserRemoteMode")
+    BrowserRemoteModeType browserRemoteMode();
 }
